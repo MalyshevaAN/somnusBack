@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${newBook}" th:action = "@{/books/new}" method = 'post'>
+  <input type="text" th:field="*{name}" id = 'nameInput'>
+  <input type="text" th:field="*{author}" id = 'authorInput'>
+  <button type = 'submit' name = "action">Create</button>
+</form>
+</body>
+</html>
